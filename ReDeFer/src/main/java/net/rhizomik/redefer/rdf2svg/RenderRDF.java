@@ -98,6 +98,7 @@ public class RenderRDF extends HttpServlet
 	public void performTask(HttpServletRequest request, HttpServletResponse response) 
 		throws javax.servlet.ServletException, IOException
 	{
+            System.out.format("RenderRDF::performTask method=%s requestURI=%s%n", request.getMethod(), request.getRequestURI());
 		request.setCharacterEncoding("UTF-8");
 		String rdf = (String) request.getSession().getAttribute("rdf");
 		if (rdf == null)
